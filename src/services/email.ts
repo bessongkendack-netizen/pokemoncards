@@ -1,0 +1,4 @@
+import { Resend } from 'resend';
+const resend = new Resend(process.env.RESEND_API_KEY);
+export async function sendTransactionalEmail(to:string, subject:string, html:string){ if(!process.env.RESEND_API_KEY) return { id:'dev-email-skipped' }; return resend.emails.send({from:'AnimeVault <orders@animevault.example>',to,subject,html}); }
+export const emails = { welcome:(name:string)=>`<h1>Welcome to AnimeVault, ${name}</h1><p>Your collector account is ready.</p>`, order:(id:string)=>`<h1>Order confirmed</h1><p>We received order ${id}.</p>`, reset:(url:string)=>`<h1>Password reset</h1><p><a href="${url}">Reset your password</a></p>`, shipping:(tracking:string)=>`<h1>Your order shipped</h1><p>Tracking: ${tracking}</p>`, refund:(id:string)=>`<h1>Refund processed</h1><p>Refund completed for ${id}.</p>` };

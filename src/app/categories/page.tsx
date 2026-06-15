@@ -1,0 +1,2 @@
+import Link from 'next/link';import { categories } from '@/lib/data';
+export default function Categories(){return <section className="mx-auto max-w-7xl px-4 py-10"><h1 className="text-4xl font-black">Categories</h1><div className="mt-6 grid gap-4 md:grid-cols-4">{categories.map(c=><Link className="card" href={`/categories/${c.slug}`} key={c.id}><h2 className="text-xl font-bold">{c.name}</h2><p>{c.description}</p></Link>)}</div></section>}
