@@ -1,0 +1,1 @@
+export default function Page(){return <section className="mx-auto max-w-4xl px-4 py-10"><h1 className="text-4xl font-black capitalize">contact</h1><div className="card mt-6"><p>AnimeVault provides secure collector commerce, transparent policies, responsive support, account tools, and marketplace-grade protections for anime trading card buyers.</p></div></section>}

@@ -1,0 +1,2 @@
+import { NextResponse } from 'next/server';import { verifyNowPaymentsSignature } from '@/services/payments';
+export async function POST(req:Request){const raw=await req.text(); const sig=req.headers.get('x-nowpayments-sig')??''; const ok=await verifyNowPaymentsSignature(raw,sig); if(!ok) return NextResponse.json({error:'invalid signature'},{status:401}); return NextResponse.json({received:true});}

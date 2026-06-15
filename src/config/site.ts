@@ -1,0 +1,2 @@
+export const siteConfig = { name: 'AnimeVault', url: process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000', description: 'Premium marketplace for graded anime trading cards, sealed collectibles, and accessories.', franchises: ['Pokémon','Yu-Gi-Oh!','One Piece','Dragon Ball','Naruto','Demon Slayer','Attack on Titan','Custom Anime Collectibles'] as const };
+export type Franchise = typeof siteConfig.franchises[number];

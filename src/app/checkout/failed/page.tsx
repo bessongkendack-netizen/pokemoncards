@@ -1,0 +1,1 @@
+export default function Failed(){return <section className="mx-auto max-w-3xl px-4 py-10"><h1 className="text-4xl font-black">Payment failed</h1><p className="card mt-6">No charge was captured. Please retry checkout or contact support.</p></section>}

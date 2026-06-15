@@ -1,0 +1,2 @@
+import { expect, test } from '@playwright/test';
+test('home page loads marketplace hero',async({page})=>{await page.goto('/'); await expect(page.getByRole('heading',{name:/trade premium anime cards/i})).toBeVisible();});
